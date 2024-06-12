@@ -18,7 +18,7 @@
   /* Sizes */
   --text-size: 12px;
   --round-margin: 40px;
-  --match-width: 150px;
+  --match-width: 20em;
   --match-horizontal-padding: 8px;
   --match-vertical-padding: 6px;
   --connector-border-width: 2px;
@@ -130,9 +130,16 @@
         background: var(--secondary-background);
       }
 
-      th,
+      th {
+        text-align: center;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+      }
+
       td {
-        padding: 5px;
+        text-align: center;
       }
 
       td {
@@ -179,7 +186,7 @@
     display: flex;
     align-items: center;
     margin: 10px 0;
-    width: var(--match-width);
+    //width: var(--match-width);
     position: relative;
 
     &.connect-next {
@@ -215,7 +222,8 @@
   }
 
   .opponents {
-    width: 100%;
+    margin: auto;
+    width: var(--match-width);
     position: relative;
     border: $match-border;
     border-radius: var(--match-border-radius);
